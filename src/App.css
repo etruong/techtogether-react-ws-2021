@@ -13,6 +13,13 @@ body {
   display: none;
 }
 
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-width: 100px;
+}
+
 .app {
   margin: 5rem;
   margin-top: 0;

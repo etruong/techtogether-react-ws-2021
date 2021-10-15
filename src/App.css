@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(216, 77, 77);
+  background-image: url("./img/background.jpeg");
+  background-position: left;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bold {
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hidden {
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  margin: 5rem;
+  margin-top: 0;
+}
+
+main > p {
+  background-color: white;
+  width: fit-content;
+}
+
+.pokemon-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  border: 1px solid black;
+}
+
+/* Pokemon card styling */
+.pokemon-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.pokemon-card {
+  border-radius: 10px;
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.pokemon-card:hover {
+  cursor: pointer;
+}
+
+.pokemon-card div > ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.pokemon-card div:nth-of-type(2) {
+  flex-basis: 150px;
+  margin: 20px;
+}
+
+/* Types */
+.pokemon-card.electric {
+  background-color: rgb(255, 255, 169);
+}
+
+.pokemon-card.grass {
+  background-color: lightgreen;
+}
+
+.pokemon-card.ground {
+  background-color: rgb(114, 62, 62);
+}
+
+.pokemon-card.fire {
+  background-color: rgb(252, 71, 71);
+}
+
+.pokemon-card.normal {
+  background-color: silver;
+}
+
+.pokemon-card.water {
+  background-color: lightblue;
+}
+
+/* Search Input styling */
+
+.filter-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-container input {
+  flex-grow: 2;
+  height: 20px;
+  padding: 5px;
+  border-radius: 100px;
+  border: 1px solid grey;
+  margin-right: 5px;
+  padding-left: 15px;
+}
+
+.filter-container input:focus {
+  outline: none;
+}
+
+.filter-container button {
+  border-radius: 100px;
+  padding: 5px;
+  border: none;
+  flex-basis: 100px;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-container button:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  color: black;
 }
